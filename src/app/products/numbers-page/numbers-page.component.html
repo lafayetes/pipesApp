@@ -1,1 +1,36 @@
-<p>numbers-page works!</p>
+<p-panel header="Numeric pipes" class="p-2">
+  <p>
+    Numeric Pipes of angular - usually included in the commom module
+  </p>
+
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-4">
+    <p-card header="Total Sells" subheader="From present year">
+      {{totalSells +1234}} = {{totalSells|number}} (using number pipe)
+      <hr>
+      {{totalSells}} = {{totalSells|number:'1.2-2'}} (pipe with config only show 2 decimals)
+    </p-card>
+
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Raw Sells" subheader="From present year">
+      {{totalSells}} = {{totalSells|currency:'BOB'}} (using currency pipe)
+      <hr>
+      {{totalSells}} = {{totalSells|currency:'':'symbol-narrow'}} (currency pype w/ symbol-narrow)
+      <hr>
+      {{totalSells}} = {{totalSells|currency:'':'symbol-narrow':'1.6-6'}} (currency pype w/ symbol-narrow and decimal definition)
+    </p-card>
+
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Porcentual earns" subheader="From present year">
+      {{percent}} = {{percent|percent:'1.2-2'}} (using percent pipe)
+
+    </p-card>
+
+  </div>
+  </div>
