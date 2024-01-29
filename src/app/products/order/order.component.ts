@@ -6,35 +6,39 @@ import { Color, Hero } from '../interfaces/hero.interface';
   templateUrl: './order.component.html',
   styles: ``
 })
-export class OrderComponent{
+export class OrderComponent {
 
-  public isUpperCase:boolean = false;
-
-  public heroes:Hero[] = [
+  public isUpperCase: boolean = false;
+  public orderBy?: keyof Hero;
+  public heroes: Hero[] = [
     {
       name: 'Superman',
-      canFly:true,
-      color:Color.blue
+      canFly: true,
+      color: Color.blue
     },
     {
       name: 'Batman',
-      canFly:false,
-      color:Color.black
+      canFly: false,
+      color: Color.black
     },
     {
       name: 'Ironman',
-      canFly:true,
-      color:Color.red
+      canFly: true,
+      color: Color.red
     },
     {
       name: 'Green lantern',
-      canFly:true,
-      color:Color.green
+      canFly: true,
+      color: Color.green
     },
   ]
 
-  toogleUpperCase():void{
+  toogleUpperCase(): void {
     this.isUpperCase = !this.isUpperCase;
+  }
+
+  toggleFilter(value: keyof Hero) {
+   this.orderBy = value;
   }
 
 }
