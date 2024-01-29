@@ -1,0 +1,88 @@
+<p-panel header="Basic pipes" class="p-2">
+  <p>
+    Common Pipes of angular - usually included in the commom module
+  </p>
+
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-4">
+    <p-card header="uppercase">
+      {{nameLower}} : {{nameLower |uppercase}}
+    </p-card>
+
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="lowercase">
+      {{nameUpper}} : {{nameUpper |lowercase}}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="titlecase">
+      {{fullName}} : {{fullName |titlecase}}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-card header="Examples">
+      <ol>
+        <li>
+          date
+        </li>
+        <li>
+          date | date
+        </li>
+        <li>
+          date | date:'short'
+        </li>
+        <li>
+          date | date:'long'
+        </li>
+        <li>
+          date | date:'MMMM'
+        </li>
+        <li>
+          date | date:'MMMM dd, yyyy'
+        </li>
+      </ol>
+    <hr>
+    <ol>
+      <li>date | date:'long':'GMT-6'</li>
+      <li>date | date:'long':'GMT-4'</li>
+    </ol>
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-card header="Results using the corresponding date pipe config">
+      <ol>
+        <li>
+          {{actualDate}}
+        </li>
+        <li>
+          {{actualDate |date}}
+        </li>
+        <li>
+          {{actualDate |date:'short'}}
+        </li>
+        <li>
+          {{actualDate |date:'long'}}
+        </li>
+        <li>
+          {{actualDate |date:'MMMM'}}
+        </li>
+        <li>
+          {{actualDate |date:'short'}}
+        </li>
+      </ol>
+
+      <hr>
+      <ol>
+        <li>{{actualDate | date:'long':'GMT-6'}}</li>
+        <li>{{actualDate | date:'long':'GMT-4'}}</li>
+      </ol>
+    </p-card>
+  </div>
+
+</div>
